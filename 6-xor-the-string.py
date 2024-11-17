@@ -1,8 +1,8 @@
 from itertools import combinations
 
 QUESTION_NAME = "6-xor-the-string"
-QUESTION_START = 5
-QUESTION_END = 5
+QUESTION_START = 3
+QUESTION_END = 4
 
 def numbers2int(line: str, separator: str = ' ') -> list[int]:
   """Convert string of numbers to list[int]"""
@@ -78,7 +78,7 @@ def solve(input_filename: str, output_filename: str) -> int:
     for _ in range(k):
       # print(f'{t_prime=}')
       [t_prime, m_prime] = transform(t_prime, m_prime)
-      print(m_prime)
+      # print(m_prime)
     beauty = get_beauty(t_prime, m_prime)
     # print(f'{t=} \t {t_prime=} \t {beauty=}')
     return beauty
